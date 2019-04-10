@@ -39,10 +39,10 @@ def configure(conf):
     conf.env.LIBPATH_ST          = '-L%s' # template for adding libpaths
 
     conf.env.CPPFLAGS.extend(c_flags)
+    conf.env.CXXFLAGS.extend("-fno-exceptions")
     conf.env.LIB          = libs
     conf.env.LINKFLAGS    = link_flags
     conf.env.CXXLNK_TGT_F = ['-o']
     conf.env.CXX_TGT_F    = ['-c', '-o']
-    conf.env.CXXFLAGS     = ["-fno-exceptions"]
     conf.env.INCLUDES     = []
     conf.env.DEFINES      = []
